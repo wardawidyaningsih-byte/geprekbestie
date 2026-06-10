@@ -253,10 +253,9 @@
             </p>
 
             <div class="hero-buttons">
-
                 <a href="#stores" class="btn-menu">
-                    🍴 Lihat Menu Kami
-                </a>
+                🍴 Lihat Daftar Toko
+            </a>
 
                 <a href="#maps" class="btn-location">
                     🗺 Hubungi / Lokasi
