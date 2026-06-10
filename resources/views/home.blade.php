@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeprekBestie</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -25,30 +27,87 @@
         }
 
         .hero{
-            min-height:90vh;
-            background:
-            linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-            url('https://images.unsplash.com/photo-1562967916-eb82221dfb92?q=80&w=2000');
-            background-size:cover;
-            background-position:center;
-            display:flex;
-            align-items:center;
-        }
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1562967916-eb82221dfb92?q=80&w=2000');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    }
 
-        .hero h1{
-            font-size:72px;
-            font-weight:800;
-            color:white;
-        }
+    .hero-content{
+        max-width:750px;
+    }
 
-        .hero span{
-            color:#fb923c;
-        }
+    .hero-badge{
+        background:#ef4444;
+        color:white;
+        display:inline-block;
+        padding:12px 25px;
+        border-radius:50px;
+        font-weight:700;
+        margin-bottom:25px;
+    }
 
-        .hero p{
-            font-size:22px;
-            color:#f3f4f6;
-        }
+    .hero-title{
+        font-size:78px;
+        font-weight:800;
+        line-height:1.1;
+        color:white;
+        margin-bottom:25px;
+    }
+
+    .hero-title span{
+        color:#ff8c00;
+        text-shadow:0 4px 12px rgba(0,0,0,.3);
+    }
+
+    .hero-desc{
+        font-size:24px;
+        line-height:1.8;
+        color:#f3f4f6;
+        max-width:700px;
+        margin-bottom:40px;
+    }
+
+    .hero-buttons{
+        display:flex;
+        gap:20px;
+        flex-wrap:wrap;
+    }
+
+    .btn-menu{
+        background:#ef4444;
+        color:white;
+        border:none;
+        padding:18px 40px;
+        border-radius:50px;
+        font-weight:700;
+        text-decoration:none;
+        transition:.3s;
+    }
+
+    .btn-menu:hover{
+        background:#dc2626;
+        color:white;
+    }
+
+    .btn-location{
+        border:2px solid white;
+        color:white;
+        padding:18px 40px;
+        border-radius:50px;
+        font-weight:700;
+        text-decoration:none;
+        transition:.3s;
+    }
+
+    .btn-location:hover{
+        background:white;
+        color:black;
+    }
 
         .btn-orange{
             background:#f97316;
@@ -176,27 +235,36 @@
 <section class="hero">
     <div class="container">
 
-        <span class="badge bg-danger p-3 rounded-pill mb-3">
-            🔥 Pedas • Gurih • Favorit
-        </span>
+        <div class="hero-content">
 
-        <h1>
-            Temukan
-            <span>Geprek Terbaik</span>
-            di Kotamu
-        </h1>
+            <div class="hero-badge">
+                🔥 Pedas • Gurih • Favorit
+            </div>
 
-        <p class="my-4">
-            Cari lokasi, harga, menu, dan informasi ayam geprek favoritmu dengan mudah.
-        </p>
+            <h1 class="hero-title">
+                Nikmati Sensasi <br>
+                Ayam Geprek <span>Bengkalis</span>
+            </h1>
 
-        <a href="#stores" class="btn btn-orange me-3">
-            🍗 Jelajahi Sekarang
-        </a>
+            <p class="hero-desc">
+                Informasi terlengkap seputar menu ayam geprek terlezat,
+                harga bersahabat, promo terbaru, lokasi, dan galeri foto
+                kuliner ayam geprek di Bengkalis.
+            </p>
 
-        <a href="#maps" class="btn-glass">
-            📍 Lihat Lokasi
-        </a>
+            <div class="hero-buttons">
+
+                <a href="#stores" class="btn-menu">
+                    🍴 Lihat Menu Kami
+                </a>
+
+                <a href="#maps" class="btn-location">
+                    🗺 Hubungi / Lokasi
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 </section>
