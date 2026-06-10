@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Store;
-use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
@@ -12,5 +11,10 @@ class StoreController extends Controller
         $stores = Store::all();
 
         return view('home', compact('stores'));
+    }
+
+    public function show(Store $store)
+    {
+        return view('stores.show', compact('store'));
     }
 }
