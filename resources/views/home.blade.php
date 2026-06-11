@@ -339,7 +339,8 @@
                             📍 {{ $store->alamat }}
                         </p>
 
-                        <a href="#" class="btn btn-orange w-100">
+                        <a href="{{ route('stores.show', $store->id) }}"
+                        class="btn btn-orange w-100">
                             Lihat Detail
                         </a>
 
