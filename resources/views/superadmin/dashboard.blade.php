@@ -271,8 +271,9 @@
                             Tambah, edit dan hapus akun admin.
                         </p>
 
-                        <a href="#" class="btn btn-orange">
+                        <a href="{{ route('admins.index') }}" class="btn btn-orange">
                             Masuk
+                        </a>
                         </a>
 
                     </div>

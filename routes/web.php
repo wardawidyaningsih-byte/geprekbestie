@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminManagementController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\AuthController;
@@ -28,6 +29,26 @@ Route::middleware(['role:admin'])->group(function () {
 
 Route::middleware(['role:super_admin'])->group(function () {
 
-    Route::get('/super-admin/dashboard', [DashboardController::class, 'superAdmin']);
+    Route::get('/super-admin/dashboard', [DashboardController::class, 'superAdmin'])
+        ->name('superadmin.dashboard');
+
+    // Kelola Admin
+    Route::get('/super-admin/admins', [AdminManagementController::class, 'index'])
+        ->name('admins.index');
+
+    Route::get('/super-admin/admins/create', [AdminManagementController::class, 'create'])
+        ->name('admins.create');
+
+    Route::post('/super-admin/admins', [AdminManagementController::class, 'store'])
+        ->name('admins.store');
+
+    Route::get('/super-admin/admins/{user}/edit', [AdminManagementController::class, 'edit'])
+        ->name('admins.edit');
+
+    Route::put('/super-admin/admins/{user}', [AdminManagementController::class, 'update'])
+        ->name('admins.update');
+
+    Route::delete('/super-admin/admins/{user}', [AdminManagementController::class, 'destroy'])
+        ->name('admins.destroy');
 
 });
